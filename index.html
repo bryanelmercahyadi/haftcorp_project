@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mantab</title>
+</head>
+<style>
+    body{
+        background-color: #343434;
+    }
+    .Bgnav{
+        background: url(bg.png);
+        height: 100vh;
+    }
+    nav div ul li a,
+    nav div ul li a:after,
+    nav div ul li a:before{
+    transition: all .5s;
+    }
+    nav div ul li a:hover{
+    color: black;
+    }
+    /* Navbar Hover Stroke */
+    nav.navbar div.collapse li a{
+    position: relative;
+    }
+    nav.navbar div.collapse li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: #e6b31e;
+    height: 2px;
+    }
+    nav.navbar div.collapse li a.white-underline:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: white;
+    height: 1px;
+    }
+    nav.navbar div.collapse li a:hover:after{
+    width: 100%;
+    }
+    .menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    }
+    .line {
+    fill: none;
+    stroke: #e6b31e;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+    }
+    .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+    }
+    .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+    }
+    .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+    }
+    .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+    }
+    .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+    }
+
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #e6b31e;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+
+    .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+    color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    }
+
+    .hor{
+        margin-left: 10px;
+        padding: 2px;
+        background-color: #343434;
+        width: 320px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <header>
+        <div class="Bgnav">
+            <div id="mySidenav" class="sidenav">
+                <p style="color: #343434; padding-left: 20px;padding-top: 50px; font-size: 35px;"><strong>Contact Us</strong></p>
+                <div class="hor"></div>
+                <p style="color: #343434; padding: 25px; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ad exercitationem ipsa facere atque labore quidem odio beatae consequatur tenetur, optio asperiores fuga voluptatibus vitae nemo? Earum quis quibusdam at.</p>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <h1 class="navbar-brand" style="color:#e6b31e ; font-size: 50px;"> HAFT</h1>
+                <!-- <img class="navbar-brand " src="https://albergo.qodeinteractive.com/wp-content/uploads/2017/12/logo-1.png" style="width: 120px;"> -->
+                <a class="menu navbar-toggler" type="button"onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </a>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item p-3">
+                      <a class="nav-link" href="#" style="color:#e6b31e; font-size: 25px;"><b>Home</b> </a>
+                    </li>
+    
+                    <li class="nav-item p-3">
+                      <a class="nav-link" href="#" style="color:#e6b31e; font-size: 25px;"><b>About Us</b></a>
+                    </li>
+    
+                    <li class="nav-item p-3">
+                      <a class="nav-link" href="#" style="color:#e6b31e; font-size: 25px;"><b>Portofolio</b></a>
+                    </li>
+    
+                  </ul>
+                  <div class="navbar-nav ml-auto">
+                    <a class="menu d-none d-sm-block d-md-block d-lg-block" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'));" data-stat="1" aria-label="Main Menu" style="z-index: 2;">
+                        <svg width="70" height="70" viewBox="0 0 100 100">
+                          <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                          <path class="line line2" d="M 20,50 H 80" />
+                          <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </a>
+                  </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "350px";
+            $(".line").css("stroke", "#343434");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            $(".line").css("stroke", "#e6b31e");
+        }
+
+        $(document).on("click",".menu",function(){
+            var stat=$(this).data("stat");
+            if(stat==1)
+            {
+                stat=0;
+                openNav();
+            }else if(stat==0){
+                stat=1;
+                closeNav();
+            }
+            $(this).data("stat",stat);
+        });
+    </script>
+</body>
+</html>
